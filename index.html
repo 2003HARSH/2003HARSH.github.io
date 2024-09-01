@@ -26,9 +26,6 @@
 
 
 	<style>
-		/*======================================
-//--//-->   ABOUT
-======================================*/
 
 		.about-mf .box-shadow-full {
 			padding-top: 4rem;
@@ -100,8 +97,6 @@
 		}
 
 
-		/* project image zoom effect */
-
 		.zoom-effect {
 			overflow: hidden;
 			transition: transform 0.3s ease-out;
@@ -154,15 +149,12 @@
 								<span class="subheading">Hello!</span>
 								<h1 class="mb-4 mt-3">I'm <span>Harsh Gupta</span></h1>
 
-								<!-- Element to contain animated typing -->
 								<span id="typing-animation"></span>
 
 								<script>
 
-									// Initialize the typing animation
 									const typingAnimationElement = document.getElementById('typing-animation');
 
-									// Create an array of typing text
 									const typingTexts = [
 										'StoryTeller  ',
 										'Blogger  ',
@@ -170,23 +162,19 @@
 										'Thinker   ',
 									];
 
-									// Create a function to display the typing animation for a given text
 									function playTypingAnimation(text) {
-										// Loop through each character and add it to the element
 										for (let i = 0; i < text.length; i++) {
 											setTimeout(() => {
 												typingAnimationElement.textContent += text[i];
-											}, i * 200); // Increase the delay to slow down the typing animation
+											}, i * 200); 
 										}
 
-										// Once the animation is complete, reset the text and start over
 										setTimeout(() => {
 											typingAnimationElement.textContent = '';
 											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
 										}, text.length * 200);
 									}
 
-									// Start the typing animation loop
 									playTypingAnimation(typingTexts[0]);
 
 								</script>
@@ -194,8 +182,7 @@
 								<br>
 								<br>
 								<h2>Data Scientist</h2>
-								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-								<!-- <br> -->
+
 								<p><a href="https://medium.com/@harshnkgupta"
 										class="btn btn-primary py-3 px-4">Medium</a>
 									<a href="https://www.linkedin.com/in/harsh-gupta-2021/"
@@ -222,7 +209,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-					<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
@@ -232,7 +218,6 @@
 											<img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt="">
 										</div>
 									</div>
-									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 										<div class="about-info">
 											<p><span class="title-s">Name: </span> <span>Harsh Gupta</span></p>
@@ -257,7 +242,7 @@
 										<div class="progress-bar" role="progressbar" style="width: 90%"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
-									<span>SQL/No-SQL</span> <span class="pull-right">80%</span>
+									<span>Databases</span> <span class="pull-right">80%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 80%"
 											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -300,7 +285,6 @@
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
 
-								<!-- <h1 class="big">About</h1> -->
 								<h2 class="mb-4">About Me</h2>
 
 								<p>I'm passionate about applying artificial intelligence and machine learning to solve
@@ -325,6 +309,7 @@
 											&amp; Vector Databases</span></li>
 									<li class="d-flex"><span>Deployment:</span> <span>Streamlit, Heroku, Huggingface Spaces, Docker &amp;
 											AWS</span></li>
+									<li class="d-flex"><span>MLOps:</span> <span>MLFlow </span></li>											
 
 								</ul>
 							</div>
@@ -358,90 +343,10 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">June 2024 - July 2024</span>
-						<h2>Data Science Intern</h2>
-						<span class="position">Codsoft</span>
-						<p class="mt-4">Codsoft, an IT Services and IT Consulting company.
-						<ul>
-							<li>Character-Level Transformer Decoder: Built a language model from scratch in PyTorch, similar to GPT, focusing more on understanding individual blocks of transformer architecture.
-							</li>
-							<li>Deep Transformer Dive: Gained a deeper grasp of transformers by implementing multi-head attention, positional encoding, and the decoder's role in sequence generation. Coded all of them from scratch.</li>
-							<li> Character-Level Advantage: Explored if character-level learning improves the model's ability to handle unseen words and morphology compared to word-based models.</li>
-							<li>Learning Experience: This project prioritizes understanding over competition with massive LLMs, offering a valuable exploration of NLP concepts.</li>
-						</ul>
-						</p>
-					</div>
-
-				</div>
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">May 2024 - June 2024</span>
-						<h2>Data Science Intern</h2>
-						<span class="position">Encryptix</span>
-						<p class="mt-4">Encryptix, an IT Services and IT Consulting company.
-						<ul>
-							<li>Deployed an end-to-end RAG application with LangChain, LangSmith, and GooglePalm,
-								utilizing ChromaDb, FewShotPromptTemplate, and create_sql_query_chain for optimized
-								query generation, and dynamic example selection for efficient language model processing.
-							</li>
-							<li>Developed Document QnA, an application enabling users to upload documents and extract
-								precise answers with page references, using advanced technologies like Llama3, Groq API,
-								LangChain, LangSmith, FAISS, and Google Palm Embeddings, all integrated into a
-								user-friendly Streamlit interface.</li>
-							<li>Worked on several ML projects provided by Encryptix, such as Credit card fraud
-								detection, Iris flower Classification and Titanic survival prediction.</li>
-						</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">April 2024 - May 2024</span>
-						<h2>Artificial Intelligence Intern</h2>
-						<span class="position">Mentorness</span>
-						<p class="mt-4">Mentorness, an IT Services and IT Consulting company.
-						<ul>
-							<li> Developed an AI-based RAG application that predicts movie titles from plot summaries
-								using LangChain, Google Palm LLM, and FAISS for RetrievalQA.</li>
-							<li> Developed a custom blog generator using Llama2, Langchain, and Huggingface.</li>
-							<li> Deployed both applications on Streamlit, providing an intuitive interface for users.
-							</li>
-						</ul>
-						</p>
-					</div>
-
-				</div>
-			
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">March 2024 - April 2024</span>
-						<h2>Data Science Intern</h2>
-						<span class="position">Pratinik Infotech</span>
-						<p class="mt-4">Pratinik Infotech, an IT Services and IT Consulting company.
-						<ul>
-							<li> Developed a next word predictor using LSTM architecture, leveraging its ability to
-								capture sequential patterns in text data with an accuracy score of 0.82 .</li>
-							<li> Conducted sentiment analysis using Word2Vec embeddings, extracting semantic meanings
-								from textual data to classify sentiment with an accuracy score of 0.89 .</li>
-							<li> Applied natural language processing (NLP) techniques to both projects, demonstrating
-								proficiency in understanding and processing textual data for predictive modeling.</li>
-						</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
 						<span class="date">June 2023 - July 2023</span>
 						<h2>Machine Learning Trainee</h2>
 						<span class="position">Analytics Vidhya</span>
-						<p class="mt-4">Analytics Vidhya, a leading IT company in Lucknow.
+						<p class="mt-4">Analytics Vidhya, a leading IT company.
 						<ul>
 							<li>Developed a Laptop Price Predictor that uses a Random Forest Regressor to provide
 								accurate price predictions based on laptop features such as RAM, memory, and processor.
@@ -524,7 +429,7 @@
 
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="https://drive.google.com/file/d/1mwt8rN3QQqlwsX4gBN73JCoYiVj0JFJZ/view?usp=sharing"
+					<p><a href="https://drive.google.com/file/d/1WrqJ2xqL4K4Oj7ZL7xDYVxTn2te8StDa/view"
 							class="btn btn-primary py-4 px-5">Download CV</a></p>
 				</div>
 			</div>
@@ -834,12 +739,34 @@
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/2003HARSH/Encryptix" class="block-20 zoom-effect"
+						<a href="https://github.com/2003HARSH/House-Price-Prediction-using-Machine-Learning"
+							class="block-20 zoom-effect" style="background-image: url('images/house.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/2003HARSH/House-Price-Prediction-using-Machine-Learning">House Price Prediction with experimentation Tracking using MLFlow
+								</a></h3>
+							<p>
+							<ul>
+								<li>Developed a house price prediction model using linear regression, predicting prices based on features like location, total square feet, number of bathrooms, and bedrooms (BHK).
+								</li>
+								<li>Experiment Tracking: Implemented MLflow for tracking experiments, streamlining the development process and providing deeper insights into model performance.</li>
+								<li>Hyperparameter Tuning: Utilized GridSearchCV and Hyperopt to fine-tune models, optimizing performance and achieving better results.
+								</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>				
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/2003HARSH/Machine-Learning-Projects" class="block-20 zoom-effect"
 							style="background-image: url('images/titanic.jpg');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/2003HARSH/Encryptix">Titanic Survival Prediction</a></h3>
+							<h3 class="heading"><a href="https://github.com/2003HARSH/Machine-Learning-Projects">Titanic Survival Prediction</a></h3>
 							<p>Using machine learning techniques, I developed a model to predict survival rates aboard the Titanic. By analyzing passenger data, I gained insights into factors influencing survival, contributing to disaster preparedness strategies.
 							</p>
 						</div>
@@ -847,23 +774,24 @@
 				</div>				
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/2003HARSH/Encryptix" class="block-20 zoom-effect"
+						<a href="https://github.com/2003HARSH/Machine-Learning-Projects" class="block-20 zoom-effect"
 							style="background-image: url('images/iris.webp');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/2003HARSH/Encryptix">Iris Flower Classification</a></h3>
+							<h3 class="heading"><a href="https://github.com/2003HARSH/Machine-Learning-Projects">Iris Flower Classification</a></h3>
 							<p>Implemented a classification model to accurately classify Iris flower species based on their features. This project honed my skills in data preprocessing, model selection, and evaluation, demonstrating proficiency in classification algorithms.</p>
 						</div>
 					</div>
-				</div>				<div class="col-md-4 d-flex ftco-animate">
+				</div>				
+				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/2003HARSH/Encryptix" class="block-20 zoom-effect"
+						<a href="https://github.com/2003HARSH/Machine-Learning-Projects" class="block-20 zoom-effect"
 							style="background-image: url('images/creditcard.png');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/2003HARSH/Encryptix">Credit Card Fraud Detection</a></h3>
+							<h3 class="heading"><a href="https://github.com/2003HARSH/Machine-Learning-Projects">Credit Card Fraud Detection</a></h3>
 							<p>Developed a robust fraud detection system using machine learning algorithms to identify fraudulent transactions. Leveraging techniques like anomaly detection and feature engineering, I contributed to enhancing financial security measures.
 							</p>
 						</div>
@@ -1013,7 +941,7 @@
 						</div>
 						<h3 class="mb-4">Download Resume</h3>
 						<p><a
-								href="https://drive.google.com/file/d/1mwt8rN3QQqlwsX4gBN73JCoYiVj0JFJZ/view?usp=sharing">Click
+								href="https://drive.google.com/file/d/1WrqJ2xqL4K4Oj7ZL7xDYVxTn2te8StDa/view">Click
 								Here</a></p>
 					</div>
 				</div>
